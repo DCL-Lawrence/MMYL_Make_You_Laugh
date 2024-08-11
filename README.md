@@ -9,10 +9,11 @@ You can compile client and server example with following
 1. `lex -t mmyl/decode.l > mmyl/decode.c`
 2. `gcc mmyl/encode.c mmyl/decode.c mmyl/dtype.c server.c -lrt -o server`
 3. `gcc mmyl/encode.c mmyl/decode.c mmyl/dtype.c client.c -o client`
-<br>
 or run
 <br>
-`make`
+```
+make
+```
 
 ## Create Ollama container.
 We use Ollama docker image for large language model
@@ -21,10 +22,11 @@ We use Ollama docker image for large language model
 3. Install: `docker pull ollama/ollama`
 4. Run container: `docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama`
 5. Execute phi model: `docker exec -it ollama ollama run phi`
-<br>
 or run
 <br>
-`make install`
+```
+make install
+```
 
 ## Remove Ollama container.
 You can use following command
@@ -32,7 +34,8 @@ You can use following command
 2. Stop ollama container: `docker stop ollama`
 3. Remove ollama container: `docker rm ollama`
 4. Remove ollama image: `docker rmi ollama`
-<br>
 or run
 <br>
-`make uninstall`
+```
+make uninstall
+```
